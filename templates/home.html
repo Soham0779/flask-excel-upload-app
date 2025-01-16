@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Excel Files</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label class="file-label">
+                Choose File 1
+                <input type="file" name="file1" onchange="displayFileName(this, 'file1-name')">
+            </label>
+            <span id="file1-name" class="file-name"></span>
+            <br><br>
+            <label class="file-label">
+                Choose File 2
+                <input type="file" name="file2" onchange="displayFileName(this, 'file2-name')">
+            </label>
+            <span id="file2-name" class="file-name"></span>
+            <br><br><br>
+            <button type="submit">Upload and Transform</button>
+        </form>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
